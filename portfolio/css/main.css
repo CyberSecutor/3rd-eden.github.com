@@ -1,0 +1,102 @@
+body { width: 1104px; float:right }
+::-moz-selection, ::selection { background:#00EC7A; color:#fff }
+
+/*
+	small profile information above the huge header.
+	use id's if you only going to apply the style once per page
+*/
+#profile { font-weight:bold; list-style:none; font-family:"Helvetica", verdana, sans-serif; font-size:12px; float:right; margin:45px 15px  }
+	#profile abbr { color:#00EC7A; margin-right:15px }
+	#profile li { margin: 15px 0 }
+	#profile a { text-decoration:none; color:#333 }
+		#profile a:hover { border-bottom:1px dotted #333 }
+	
+#face { clear:both; overflow:hidden }
+	#face div { width:399px; height:399px; background:#000; float:left }
+	#face .graphic { width:705px; background:#00EC7A; color:#fff; overflow:hidden }
+		.graphic p { font-family:"Helvetica", verdana, sans-serif; font-size:183px; text-transform:lowercase; position:relative; 
+			/*
+				CSS3 allows me to create the header image i wanted without having to save a 705x399 background image.
+				Remember boys and girls, God kills a puppy for every HTTP request you make on your website.
+			*/
+			-webkit-transform: rotate(-21deg);
+			-moz-transform: rotate(-21deg);
+			transform: rotate(-21deg)
+		}
+			/* positioning of the letters, and yes it was a pain to calculate the positions \o/ VICTORY */
+			.graphic p:nth-child(1n) { margin: -148px 0 0 -80px }
+			.graphic p:nth-child(2n) { margin: -50px 0 0 -75px }
+			.graphic p:nth-child(3n) { margin: -15px 0 0 -280px }
+			.graphic p:nth-child(4n) { margin: -285px 0 0 280px }
+			.graphic p:nth-child(5n) { margin: 50px 0 0 -285px }
+			.graphic p:nth-child(6n) { margin: -330px 0 0 485px }
+			.graphic p:nth-child(7n) { margin: 20px 0 0 108px }
+	
+	#face h1 { background:transparent url(../images/3rdEdenSprite.png) no-repeat scroll 0 -201px; text-indent:-99999px; width:285px; height:89px; margin:140px auto 0  }
+	nav.calluna { color:#FFF; margin:40px 0 0 40px; display:none }
+		nav.calluna a { text-decoration:none; color:#FFF }
+			nav.calluna a:hover { color:#00EC7A }
+		nav.calluna h4 { margin:0 0 40px; font-size:24px; font-weight:normal }
+		nav.calluna li { list-style-type:upper-roman; margin:10px 0 0 35px; font-style:italic; font-size:18px }
+
+	/* These style the individual headings */
+	.first { background:#0d0d0d }
+	.second { background:#121212 }
+	.third { background:#292929 }
+	.fourth { background:#333333 }
+
+section article:first-child { overflow:hidden; height:114px }	
+.intro { width:359px; color:#fff; padding:45px 0 45px 40px; float:left }
+	.intro h2 { font-family:"Helvetica", verdana, sans-serif; font-size:24px; font-weight:normal }
+	
+.content { width:670px; float:left; padding:30px 15px 0 20px; color:#333; font-size:12px; height:100%; line-height:18px }
+	.highlight { background:#f6f6f6 }
+	
+/* fancy pancy amp; styling */
+.amp { font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif; font-style: italic; font-weight: normal; }
+a.note { font-size:9px; line-height:10px;  }
+	
+/*
+	styling of the work experiance section. Oh The <time> element should really allow a time range, so we are using details ele to wrap multiple times.. 
+*/
+aside { width:399px; float:left }
+	aside details { float:right; background:#444343; padding:25px; color:#FFF; font-family:"Helvetica", verdana, sans-serif; font-size:18px; text-transform:uppercase; width:190px }
+		aside small { font-size:12px; font-style:italic; text-transform:lowercase; margin-left:20px }
+		aside.active details{ background:#fff; color:#333; border-bottom:1px solid #E5E5E5; border-top:1px solid #E5E5E5; padding:25px 25px 23px}
+		aside.hover details, aside details:hover { background:#00EC7A; border:0; color:#fff; padding:25px }
+	aside.wrapper { position:relative }
+		
+.default, .skills { width:705px; float:left; color:#333 }
+	.default hgroup, .skills hgroup { border-top:1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; overflow:hidden; padding: 24px 15px 18px 20px }
+		.default h3, .skills h3, .skills h6 { font-family:"Helvetica", verdana, sans-serif; font-size:24px; float:left }
+		.default h4, .skills h4 { float:right; color:#868686; font-size:12px; font-style:italic; line-height:24px; font-weight:normal }
+		.default h5 { font-family:"Helvetica", verdana, sans-serif; font-size:18px; padding:30px 15px 0 20px }
+	.default p, .skills p { padding:30px 15px 0 20px; font-size:12px; line-height:18px }
+	.default p a, .skills p a, .content a { text-decoration:none; border-bottom:1px dotted #333; color:#000 }
+	.default p a:hover, .skills p a:hover, .content a:hover { border-bottom:1px solid #00EC7A }
+	
+	.default ul { padding:30px 15px 0 20px }
+		.default li { margin:15px 0; font-size:12px; list-style:square inside none; color:#00EC7A }
+			.default li span { color:#333 }
+
+.skills h3 { width:200px }
+	.skills h4.description { float:left }
+	.skills hgroup { cursor:pointer }
+	.js .skills p { display:none; margin-bottom:15px }
+	.js .skills p.open { display:block }
+	.skills h6 { float:right }
+
+blockquote { padding:20px 15px 15px 20px; position:relative }
+	blockquote span { font-size: 700%; color: #e6e6e6; position:absolute }
+		blockquote span.close { right:0px }
+	.default blockquote p { font-size:18px; font-style:italic; color:#7f7f7f; position:relative; z-index:99; text-align:center; margin-top:15px }
+	blockquote cite { text-transform:uppercase; float:right; position:relative; z-index:99; margin:15px 45px 0 0; border-bottom:1px dotted #333 }
+
+.clip { position: absolute; left: 0 }
+	.aug { clip:rect(0 200px 58px 0); top:80px }
+	.acp { clip:rect(60px 240px 122px 0 ); top:13px }
+	.max { clip:rect(122px 200px 178px 0 ); top:-50px }
+
+/* These styles create interaction  */
+div.logo:hover h1 { display:none }
+div.logo:hover nav { display:block }
